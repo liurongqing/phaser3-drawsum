@@ -5,11 +5,19 @@ import scene from '~/scenes'
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   scale: {
-    mode: Phaser.Scale.NONE,
+    mode: Phaser.Scale.RESIZE,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: 'root',
-    width: 800,
-    height: 600
+    width: 750,
+    height: 1334,
+    min: {
+      width: 375,
+      height: 667
+    },
+    max: {
+      width: 750,
+      height: 1334
+    }
   },
   physics: {
     default: 'arcade',
