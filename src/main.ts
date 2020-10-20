@@ -8,16 +8,18 @@ const config: Phaser.Types.Core.GameConfig = {
     mode: Phaser.Scale.ENVELOP,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: 'root',
-    width: 750,
-    height: 1334,
-    min: {
-      width: 375,
-      height: 667
-    },
-    max: {
-      width: 750,
-      height: 1334
-    }
+    // width: 750,
+    width: window.innerWidth * window.devicePixelRatio,
+    height: window.innerHeight * window.devicePixelRatio,
+    // height: 1334,
+    // min: {
+    //   width: 375,
+    //   height: 667
+    // },
+    // max: {
+    //   width: 750,
+    //   height: 1334
+    // }
   },
   physics: {
     default: 'arcade',

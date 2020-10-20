@@ -24,17 +24,25 @@ export default class Test extends Phaser.Scene {
     // this.cameras.main.setAlpha(0.2)
 
 
+    var debug = this.add.graphics();
+
     this.parent = new Phaser.Structs.Size(this.GAME_WIDTH, this.GAME_HEIGHT)
     this.sizer = new Phaser.Structs.Size(width, height, Phaser.Structs.Size.FIT, this.parent)
+
+    console.log('window.innerWidth', window.innerWidth * 2)
+
+    debug.clear().translateCanvas(10, 10);
+    debug.lineStyle(3, 0xffff00).strokeRect(0, 0, this.parent.width - 60, this.parent.height - 60);
 
     this.sizer.setSize(0, 0)
     this.add.image(this.sizer.x, this.sizer.y, 'test-item').setOrigin(0)
 
-    this.backgroundScene = this.scene.get(SceneKeys.GAME)
 
-    this.add.text(width * 0.5, height * 0.5 + 100, 'test 100', {
-      fontSize: '38px'
-    }).setOrigin(0.5)
+    // this.backgroundScene = this.scene.get(SceneKeys.GAME)
+
+    // this.add.text(width * 0.5, height * 0.5 + 100, 'test 100', {
+    //   fontSize: '38px'
+    // }).setOrigin(0.5)
   }
 
   getZoom() {
