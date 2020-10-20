@@ -5,7 +5,7 @@ import scene from '~/scenes'
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   scale: {
-    mode: Phaser.Scale.RESIZE,
+    mode: Phaser.Scale.ENVELOP,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: 'root',
     width: 750,
